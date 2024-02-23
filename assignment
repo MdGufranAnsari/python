@@ -1,4 +1,10 @@
-def square_dictionary(n): square_dict = {} for i in range(1, n+1): square_dict[i] = i * i return square_dict
+1)Write a program that will find all such numbers that are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).
+ The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+
+
+
+CODE=  def square_dictionary(n): square_dict = {} for i in range(1, n+1): square_dict[i] = i * i return square_dict
 
 n = int(input("Enter an integer n: ")) result_dict = square_dictionary(n)
 
@@ -21,3 +27,90 @@ num_list = [int(num) for num in input_str.split(',')]
 num_tuple = tuple(num_list)
 
 print("List:", num_list) print("Tuple:", num_tuple)
+
+
+2)Reverse the contents of the file1.txt.
+
+CODE-
+# Read the contents of the file
+with open('f1.txt', 'r') as file:
+    lines = file.readlines()
+
+# Reverse the lines
+reversed_lines = reversed(lines)
+
+# Write the reversed lines back to the file
+with open('f1.txt', 'w') as file:
+    file.writelines(reversed_lines)
+
+
+3)Convert all the numbers in the file2.txt to text. 
+Ex: This file has numbers 1,2
+Convert it to : This file has numbers one,two
+
+CODE-
+'''
+Convert all the numbers in the file2.txt to text. 
+
+    Ex: This file has numbers 1,2
+    Convert it to : This file has numbers one,two
+'''
+
+# Define a dictionary to map numbers to text
+number_mapping = {
+    0: "zero",
+    1: "one",
+    2: "two",
+    3: "three",
+    4: "four",
+    5: "five",
+    6: "six",
+    7: "seven",
+    8: "eight",
+    9: "nine"
+}
+
+# Read the contents of the file
+with open("f2.txt", "r") as file:
+    content = file.read()
+
+# Replace numbers with their text representations
+for number, text in number_mapping.items():
+    content = content.replace(str(number), text)
+
+# Write the modified content back to the file
+with open("f2.txt", "w") as file:
+    file.write(content)
+
+
+
+4)Prepare a dictionary from file3.txt.
+Dataset: f1.txt , f2.txt, f3.txt
+
+
+CODE-
+# Define the file path
+file_path = "f3.txt"
+
+# Initialize an empty dictionary
+my_dict = {}
+
+# Open the file and read its contents
+with open(file_path, "r") as file:
+    # Read each line in the file
+    for line in file:
+        # Split the line into key-value pairs
+        key, value = line.strip().split(":")
+        
+        # Add the key-value pair to the dictionary
+        my_dict[key] = value
+
+# Print the dictionary
+print(my_dict)
+
+
+
+
+
+
+
